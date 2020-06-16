@@ -1,0 +1,11 @@
+#!/bin/sh -e
+mkdir -p /proc /sys /tmp
+mount /proc
+mount /sys
+mount -t tmpfs none /tmp
+mount -n -o mode=0755 -t devtmpfs devtmpfs /dev
+mkdir -p /dev/pts
+mount -t devpts -o noexec,nosuid,gid=5,mode=0620 devpts /dev/pts
+
+[ ! -e /lib/modules/4.19.0-9-amd64/modules.dep ] && depmod -a
+

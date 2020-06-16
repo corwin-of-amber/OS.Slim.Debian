@@ -1,0 +1,6 @@
+Debian netboot images
+http://ftp.us.debian.org/debian/dists/buster/main/installer-amd64/current/images/netboot
+
+Debian installer packages
+http://ftp.us.debian.org/debian/dists/buster/main/debian-installer/binary-amd64/Packages.xz
+
